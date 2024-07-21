@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd"
+                           default-init-method="init"
+                           default-destroy-method="destroy"
+                           >
+ -->
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd"
+                           >
+
+                
+	<!-- bean definitions here -->
+
+	<context:annotation-config />
+
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.class"/> -->
+
+	<!-- <bean id="studentDAO" class="Beanlifecycle.bean.StudentDao"> <property 
+		name="driver" value="com.mysql.cj.jdbc.Driver"/> <property name="url" value="jdbc:mysql://127.0.0.1:3306/?user=root/fullstack"/> 
+		<property name="userName" value="root"/> <property name="password" value="root"/> 
+		</bean> -->
+
+<!-- 
+	<bean id="studentDAO" class="Beanlifecycle.bean.StudentDao" init-method="init" destroy-method="destroy">
+		<property name="driver" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://127.0.0.1:3306/?user=root/fullstack" />
+		<property name="userName" value="root" />
+		<property name="password" value="root" />
+	</bean>
+ 
+ 
+	<bean id="helloBean" class="Beanlifecycle.bean.Hello">
+	</bean>
+-->
+
+<!-- 
+	<bean id="studentDAO" class="Beanlifecycle.bean.StudentDao">
+		<property name="driver" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://127.0.0.1:3306/?user=root/fullstack" />
+		<property name="userName" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="helloBean" class="Beanlifecycle.bean.Hello" init-method="init" destroy-method="destroy">
+	</bean>
+-->
+
+<!-- 3rd way to use init destroy method -->
+	<bean id="helloBean" class="Beanlifecycle.bean.Hello">
+	</bean>
+
+</beans>
+
+ 
